@@ -91,6 +91,7 @@ function capNhatNhanVien() {
     isValid &= validation.checkEmpty(tenNV, "tên nhân viên không được để trống", "spanten") && validation.checkName(tenNV, "tên nhân viên chưa đúng định dạng", "spanten")
     isValid &= validation.checkEmpty(email, "email không được để trống ", "spanemail") && validation.checkEmail(email, "email chưa đúng định dạng", "spanemail")
     isValid &= validation.checkEmpty(matKhau, "mật khẩu  không được để trống ", "spanMatKhau") && validation.checkPass(matKhau, "mật khẩu chưa đúng định dạng", "spanMatKhau")
+    isValid &= validation.checkEmpty(ngayLam, "ngày làm  không được để trống ", "spanngaylam") && validation.checkNgaylam(ngayLam, "ngày làm chưa đúng định dạng", "spanngaylam")
     isValid &= validation.checkDropdown("chucvu", "bạn chưa chọn chức vụ ", "spanchucvu");
     isValid &= validation.checkEmpty(gioLam, "giờ làm không được để trống ", "spangiolam") && validation.checkgioLam(gioLam, "giờ làm chưa đúng định dạng", "spangiolam")
     isValid &= validation.checkEmpty(luong, "lương cơ bản không được để trống ", "spanluongcb") &&validation.checkLuong(luong, "lương chưa đúng định dạng", "spanluongcb")

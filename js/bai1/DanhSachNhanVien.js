@@ -27,3 +27,20 @@ function DanhSachNhanVien() {
         }
     }
 }
+DanhSachNhanVien.prototype.timKiemNV=function(tuKhoaTK){
+    var mangKetQua = []
+    //B1 chuyển tukhoatk sang chữ thường (toLovercase),xóa khoảng trắng
+    var tuKhoa = tuKhoaTK.toLowerCase().replace(/\s/g, "")
+    console.log(tuKhoa);
+    this.mangNV.map(function(nv){
+         //B2 chuyển tukhoatk sang chữ thường (toLowerCase()),xóa khoảng trắng
+        var loai= nv.Loai.toLowerCase().replace(/\s/g, "");
+        //b3 :so sánh tên sv có chứa từ kiếm không
+        var viTri = loai.indexOf(tuKhoa);
+        console.log(viTri);
+        if(viTri >-1){
+            mangKetQua.push(nv)
+        }
+    })
+    return mangKetQua
+}

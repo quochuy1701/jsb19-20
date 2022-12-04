@@ -1,5 +1,5 @@
 function DanhSachNhanVien() {
-    this.mangNV = []
+    this.mangNV = [];
    
     this.themNV = function (nv) {
         //thêm phần tử sc vào mảng
@@ -11,8 +11,6 @@ function DanhSachNhanVien() {
             return maNVXoa == nv.taiKhoan
         })
         return viTri;
-
-
     }
     this.xoaNV = function (maNVXoa) {
         var viTri = this.timVitri(maNVXoa);
@@ -31,7 +29,6 @@ DanhSachNhanVien.prototype.timKiemNV=function(tuKhoaTK){
     var mangKetQua = []
     //B1 chuyển tukhoatk sang chữ thường (toLovercase),xóa khoảng trắng
     var tuKhoa = tuKhoaTK.toLowerCase().replace(/\s/g, "")
-    console.log(tuKhoa);
     this.mangNV.map(function(nv){
          //B2 chuyển tukhoatk sang chữ thường (toLowerCase()),xóa khoảng trắng
         var loai= nv.Loai.toLowerCase().replace(/\s/g, "");

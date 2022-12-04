@@ -33,10 +33,7 @@ function themNhanVien() {
     }
 }
 function setlocalstorage() {
-
     localStorage.setItem("DSNV", JSON.stringify(dsnv.mangNV));
-
-
 }
 function getLocalstorage() {
     if (localStorage.getItem("DSNV") != null) {
